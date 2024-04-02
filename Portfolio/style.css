@@ -1,0 +1,248 @@
+:root {
+    --clr-text: #ffffff;
+    --clr-bg: #05090c;
+    --bs-emphasis-color-rgb: var(--clr-text);      
+}
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: var(--clr-text);
+    color: var(--clr-bg);
+    font-size: 16px;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background: none;
+    display: inline;
+    color: inherit;
+}
+
+.my-image {
+    width: 60%;
+}
+.card-img-top {
+    width: 25%;
+}
+
+/* Fonts size (start)*/
+.navbar-brand { font-size: 20px; }
+
+.helloworld { font-size: 60px; }
+
+.banner {
+    h1 { font-size: 60px; }
+    h4 { font-size: 23px; }
+    p { font-size: 20px; }
+}
+
+.title { font-size: 23px; }
+
+.normal-text { font-size: 18px;width: 80%; }
+
+.skill-text *, .about-btn { font-size: 16px; }
+
+
+@media screen and (max-width: 768px) {
+    .helloworld { font-size: 40px; }
+    .banner {
+        h1 { font-size: 40px; }
+        h4 { font-size: 20px; }
+        p { font-size: 18px; }
+    }
+    .title { font-size: 20px; }
+    .normal-text { font-size: 16px; }
+    .skill-text * { font-size: 14px; }
+    .about-btn { 
+        font-size: 14px;
+    }
+    #about-btn { 
+        padding: 10px 5px;
+    }
+    .my-image {
+        width: 80%;
+    }
+    .card-img-top { width: 40%; }
+}
+
+@media screen and (max-width: 426px) {
+    .helloworld { font-size: 30px; }
+    .banner {
+        h1 { font-size: 30px; }
+        h4 { font-size: 18px; }
+        p { font-size: 16px; }
+    }
+    .title { font-size: 18px; }
+    .normal-text { font-size: 13px;width: 85%; }
+    .skill-text * { font-size: 12px; }
+    .about-btn { 
+        font-size: 12px;
+    }
+    #about-btn { 
+        padding: 10px 5px;
+    }
+    .my-image { width: 80%; }
+    .card-body { padding: 0px 0px 4px;}
+    .card-img-top { width: 50%; }
+}
+
+/* Font Size (end)*/
+
+nav {
+    border-bottom: 1px solid #c7c4c449;
+    backdrop-filter: blur(1.5px);
+}
+
+.navbar-brand, .nav-link {
+    color: inherit;
+}
+
+.theme-btn {
+    :hover{
+        cursor: pointer;
+        background-color: rgba(128, 128, 128, 0.178);
+        /* border-radius: 15px; */
+    }
+}
+
+.section-title {
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0px;
+    height: 1.2px;
+    width: 45px;
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+#banner-section {
+    height: 90vh;
+}
+
+.show-background {
+    background-image: url("./assets/background.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.helloworld {
+    border-right: .05em solid #20C20E;
+    color: rgb(21, 151, 32);
+}
+
+.social-icon a{
+    padding: 0px 15px;
+    img {
+        cursor: pointer;
+    }
+}
+
+.about-btn a {
+    background-color: #6c757d;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.about-btn a:hover {
+    background-color: #c7c7c7;
+    color: #6c757d;
+}
+
+.resume-btn {
+    position: absolute;
+    top: 12%;
+    right: 5%;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transform: translateX(-30%);
+    transition: all 1.2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.social-icon, .about-btn {
+    transform: scaleX(1);
+    transition-delay: 300ms;
+}
+
+.about:nth-child(1) {
+    transition-delay: 50ms;
+}
+.about:nth-child(2) {
+    transition-delay: 400ms;
+}
+
+.skill:nth-child(1) {
+    transition-delay: 50ms;
+}
+.skill:nth-child(2) {
+    transform: scaleX(1);
+    transition-delay: 300ms;
+}
+
+.connect:nth-child(3) {
+    transform: scaleX(1);
+    transition-delay: 50ms;
+}
+
+/* Glitch */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 80%; }
+  }
+  
+@keyframes glitch {
+0% { opacity: 1; }
+20% { opacity: 0; }
+30% { opacity: 1; }
+32% { opacity: 0; }
+34% { opacity: 1; }
+36% { opacity: 0; }
+100% { opacity: 1; }
+}
+
+.typing-effect {
+overflow: hidden;
+white-space: nowrap;
+animation: typing 2s steps(40, end), blink-caret .75s step-end;
+}
+
+.glitch-effect {
+    animation: glitch 1s;
+} 
+
+.hide {
+    visibility: hidden;
+}
